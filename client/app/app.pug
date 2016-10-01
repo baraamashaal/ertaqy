@@ -1,0 +1,11 @@
+md-sidenav.app-sidenav(md-component-id='left', md-is-locked-open="$mdMedia('gt-sm')")
+  md-content sidenav 
+div(layout='column', layout-fill='')
+  md-toolbar
+    .md-toolbar-tools
+      span My App's Title
+      // fill up the space between left and right area
+      span(flex='')
+      md-button Right Bar Button
+  md-content
+    md-button(ng-click='$ctrl.openLeftMenu()') open menu
