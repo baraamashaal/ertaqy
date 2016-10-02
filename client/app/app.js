@@ -6,19 +6,32 @@ import ngMaterial from 'angular-material';
 
 import appComponent from './app.component';
 
+import dashboardModule from './dashboard/dashboard';
+import cmsModule from './cms/cms';
+
 import 'angular-material/angular-material.css';
 
-let appModule = angular.module('app', [
-  uiRouter,
-  ngMaterial,
-  // Common,
-  // Components
-]).config(($locationProvider) => {
-  "ngInject";
-  // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
-  // #how-to-configure-your-server-to-work-with-html5mode
-  $locationProvider.html5Mode(false).hashPrefix('!');
-}).component('app', appComponent).name;
+let appModule = angular
+  .module('app', [
+    uiRouter,
+    ngMaterial,
+    // Common,
+    // Components
+    dashboardModule,
+    cmsModule
+
+  ])
+  .config(($locationProvider, $stateProvider, $urlRouterProvider) => {
+    "ngInject";
+    // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
+    // #how-to-configure-your-server-to-work-with-html5mode
+    $locationProvider.html5Mode(false).hashPrefix('!');
+
+    $urlRouterProvider.otherwise('/');
+
+  })
+  .component('app', appComponent)
+  .name;
 
 export default appModule;
 
