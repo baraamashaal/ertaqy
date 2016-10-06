@@ -1,18 +1,17 @@
 md-toolbar.md-tall
-    h2.md-toolbar-tools
-      span Toolbar: tall (md-accent)
-      md-menu
-        md-button.md-icon-button(aria-label='Open phone interactions menu', ng-click='')
-          md-icon menu
+  h2.md-toolbar-tools
+    md-button.md-icon-button(aria-label='hi there',ng-hide='$ctrl.appNavState()', ng-click='$ctrl.openAppNav()')
+      md-icon &#xE5D2;
+    span Ertaqy system
+    span(flex)
+    div.menu-icons
+      md-button.md-icon-button(aria-label='asashkashkajh')
+        md-icon &#xE5C3;
+      md-button.md-icon-button(aria-label='asashkashkajh')
+        md-icon &#xE7F4;
+      md-menu(md-position-mode="target-right target").md-accent
+        md-button.md-icon-button(aria-label='Open phone interactions menu', ng-click='$ctrl.openMenu($mdOpenMenu, $event)')
+          md-icon &#xE5D4;
         md-menu-content(width='4')
           md-menu-item
-            md-button(ng-click='')
-              md-icon call
-          md-menu-item
-            md-button(disabled='disabled', ng-click='')
-              md-icon voicemail
-          md-menu-divider
-          md-menu-item
-            md-button(ng-click='')
-              md-icon notifications
-
+            md-button(aria-label='hi there')

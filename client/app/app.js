@@ -4,7 +4,6 @@ import ngMaterial from 'angular-material';
 // import Common from './common/common';
 // import Components from './components/components';
 
-import appComponent from './app.component';
 
 // import dashboardModule from './dashboard/dashboard';
 import cmsModule from './cms/cms';
@@ -12,6 +11,8 @@ import cmsModule from './cms/cms';
 import sidenavDirective from './directives/sidenav/sidenav';
 import appbarDirective from './directives/appbar/appbar';
 import 'angular-material/angular-material.css';
+
+import appComponent from './app.component';
 
 let appModule = angular
   .module('app', [
@@ -34,10 +35,10 @@ let appModule = angular
     $mdThemingProvider.theme('default')
       .primaryPalette('pink')
       .accentPalette('orange');
-    $mdThemingProvider.theme('default').dark();
+    // $mdThemingProvider.theme('default').dark();
   })
   .component('app', appComponent)
-  .directive('sidenav', sidenavDirective)
+  .directive('app-nav', sidenavDirective)
   .directive('appbar', appbarDirective)
   .name;
 
