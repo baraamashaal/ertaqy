@@ -1,0 +1,845 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"app",
+				"appController"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"con",
+				"controller\tAngular.js"
+			],
+			[
+				"md-too",
+				"md-toolbar\tAngular Material - Toolbars are usually used above a content area to display the title of the current page, and show relevant action buttons for that page."
+			],
+			[
+				"md-c",
+				"md-content\tAngular Material - md-content"
+			],
+			[
+				"md",
+				"md-tab\tAngular Material - Use the md-tab a nested directive used within md-tabs to specify a tab with a label and optional view content."
+			],
+			[
+				"c",
+				"color.js"
+			],
+			[
+				"for",
+				"forward〔function〕"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"load",
+				"load\t.load()"
+			],
+			[
+				"util",
+				"Util"
+			],
+			[
+				"ty",
+				"types"
+			],
+			[
+				"typs",
+				"types"
+			],
+			[
+				"pb",
+				"prevObj"
+			],
+			[
+				"obj",
+				"objChain"
+			],
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"typ",
+				"typeof"
+			],
+			[
+				"to",
+				"typeof"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"co",
+				"contains\t.contains()"
+			],
+			[
+				"expo",
+				"export:function\tES6 Module Export Function"
+			],
+			[
+				"ex",
+				"export:variable\tES6 Module Export Variable"
+			],
+			[
+				"sele",
+				"selector"
+			],
+			[
+				"bu",
+				"buildHtmlTable"
+			],
+			[
+				"time",
+				"times"
+			],
+			[
+				"fa",
+				"faker"
+			],
+			[
+				"_toke",
+				"_token"
+			],
+			[
+				"off",
+				"offset\t.offset()"
+			],
+			[
+				"par",
+				"parentsUntil\t.parentsUntil()"
+			],
+			[
+				"add",
+				"addClass\t.addClass()"
+			],
+			[
+				"new",
+				"New"
+			],
+			[
+				"Lis",
+				"lists"
+			],
+			[
+				"a",
+				"attributes"
+			],
+			[
+				"data",
+				"dataType"
+			],
+			[
+				"conf",
+				"config"
+			],
+			[
+				"config",
+				"configTypes"
+			],
+			[
+				"def",
+				"defConf"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"type",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"de",
+				"File: Delete"
+			],
+			[
+				"dele",
+				"ANF: Delete File"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"han",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"babel ",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"set jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"s html",
+				"Set Syntax: HTML"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"set notes",
+				"Set Syntax: Notes"
+			],
+			[
+				"notes",
+				"Set Syntax: Notes - Text"
+			],
+			[
+				"set note",
+				"Set Syntax: Note"
+			],
+			[
+				"note",
+				"Notes: New…"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"not",
+				"Set Syntax: Notes"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 872.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/baraa/sites/projects/ertaqy/client",
+		"/home/baraa/sites/projects/ertaqy/client/app",
+		"/home/baraa/sites/projects/ertaqy/client/app/components",
+		"/home/baraa/sites/projects/ertaqy/client/app/directives",
+		"/home/baraa/sites/projects/ertaqy/client/app/directives/sidenav"
+	],
+	"file_history":
+	[
+		"/home/baraa/sites/projects/ertaqy/client/app/directives/sidenav/sidenav.styl",
+		"/home/baraa/sites/projects/ertaqy/client/app/directives/sidenav/sidenav.pug",
+		"/home/baraa/sites/projects/ertaqy/client/app/app.pug",
+		"/home/baraa/sites/projects/ertaqy/client/app/directives/sidenav/sidenav.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/directives/app-sidenav.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/app.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/cms/cms.pug",
+		"/home/baraa/sites/projects/ertaqy/client/app/cms/cms.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/Old.cms/cms.js",
+		"/home/baraa/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/home/baraa/sites/projects/ertaqy/client/app/Old.cms/pages/pages.js",
+		"/home/baraa/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/home/baraa/sites/projects/ertaqy/client/app/cms/settings/general/general.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/cms/settings/settings.pug",
+		"/home/baraa/sites/projects/ertaqy/client/index.html",
+		"/home/baraa/sites/projects/ertaqy/client/app/cms/settings/settings.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/app.component.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/app.styl",
+		"/home/baraa/sites/projects/ertaqy/client/app/appCtrl.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/app.html",
+		"/home/baraa/sites/projects/ertaqy/client/app/common/common.js",
+		"/home/baraa/sites/projects/ertaqy/client/app/components/components.js",
+		"/home/baraa/sites/projects/ertaqy/src/app/ertaqy-sys/ertaqy-sys.component.html",
+		"/home/baraa/sites/projects/ertaqy/src/app/app.module.ts",
+		"/home/baraa/sites/projects/ertaqy/src/styles.scss",
+		"/home/baraa/sites/projects/ertaqy/src/app/ertaqy-sys/ertaqy-sys.component.ts",
+		"/home/baraa/sites/projects/ertaqy/src/index.html",
+		"/home/baraa/sites/projects/app/ertaqy/src/ertaqy/components/index.js",
+		"/home/baraa/sites/projects/ertaqy/app/src/app.js",
+		"/home/baraa/sites/projects/ertaqy/db.json",
+		"/home/baraa/sites/projects/ertaqy/styles/css/your_style.css",
+		"/home/baraa/sites/projects/ertaqy/index.html",
+		"/home/baraa/sites/projects/ertaqy/app.scripts.json",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/controllers/CMSDashCtrl.js",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/views/index.html",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/module.js",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/directives/pages-tree.js",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/directives/pages-tree.tpl.html",
+		"/home/baraa/sites/projects/ertaqy/app/cms/page-manger/models/pageList.js",
+		"/home/baraa/sites/projects/ur-dash/src/components/appbar/tmpl.jade",
+		"/home/baraa/sites/projects/ur-dash/src/main.js",
+		"/home/baraa/sites/projects/ur-dash/src/directives/color.js",
+		"/home/baraa/sites/projects/ur-dash/src/components/appbar/styl.styl",
+		"/home/baraa/sites/projects/ur-dash/src/App.vue",
+		"/home/baraa/sites/projects/ur-dash/src/components/buttons/index.vue",
+		"/home/baraa/sites/projects/ur-dash/src/components/buttons/styl.styl",
+		"/home/baraa/sites/projects/myDash/src/main.js",
+		"/home/baraa/sites/projects/myDash/src/App.vue",
+		"/home/baraa/sites/projects/myDash/src/router.js",
+		"/home/baraa/sites/projects/myDash/src/components/Hello.vue",
+		"/home/baraa/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/baraa/sites/projects/myDash/src/components/partials/appbar.vue",
+		"/home/baraa/sites/testing/dashboard/scripts/components/app.vue",
+		"/home/baraa/sites/testing/dashboard/scripts/components/componentA.vue",
+		"/home/baraa/sites/testing/dashboard/scripts/components/ componentB.vue",
+		"/home/baraa/sites/testing/dashboard/index.html",
+		"/home/baraa/sites/testing/dashboard/scripts/main.js",
+		"/home/baraa/sites/testing/dashboard/webpack.config.js",
+		"/home/baraa/sites/projects/dashboard/app/index.html",
+		"/home/baraa/sites/testing/dashboard/resources/assets/js/app.js",
+		"/home/baraa/sites/testing/dashboard/resources/views/welcome.blade.php",
+		"/home/baraa/sites/ng/angular-mohamed/src/app/app.component.ts",
+		"/run/user/1000/gvfs/ftp:host=184.107.171.154/style/teststyle.css",
+		"/home/baraa/sites/projects/cms/doc/dist/index.html",
+		"/home/baraa/sites/projects/cms/doc/bower_components/bootstrap-sass/assets/stylesheets/untitled",
+		"/home/baraa/sites/projects/cms/doc/bower_components/bootstrap-sass/assets/stylesheets/sftp-config.json",
+		"/home/baraa/.config/sublime-text-3/Packages/User/SFTP.sublime-settings",
+		"/home/baraa/sites/projects/cms/doc/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss",
+		"/home/baraa/sites/projects/cms/doc/app/includes/header.jade",
+		"/home/baraa/sites/projects/cms/doc/gulpfile.js",
+		"/home/baraa/sites/projects/devxpro/app/views/cms-mng/views.hbs",
+		"/home/baraa/sites/projects/devxpro/app/views/cms-mng/index.html",
+		"/home/baraa/sites/projects/devxpro/app/db.json",
+		"/home/baraa/sites/projects/devxpro/app/views/cms-mng/add.html",
+		"/home/baraa/sites/projects/devxpro/app/views/cms-mng/treeViewPartial.hbs",
+		"/home/baraa/sites/projects/devxpro/app/styles/dashboard.scss",
+		"/home/baraa/sites/projects/devxpro/app/register.html",
+		"/home/baraa/sites/projects/devxpro/app/scripts/main.js",
+		"/home/baraa/sites/projects/devxpro/app/scripts/lib/app.config.js",
+		"/home/baraa/sites/projects/devxpro/app/index.html",
+		"/home/baraa/sites/projects/devxpro/app/scripts/lib/bootstrap-treeview.min.js",
+		"/home/baraa/sites/projects/devxpro/app/login.html",
+		"/home/baraa/sites/projects/devxpro/app/views/cms-mng/cms-mng.hbs",
+		"/home/baraa/sites/projects/devxpro/db-1471681129742.json",
+		"/home/baraa/sites/projects/devxpro/app/styles/lib/smartadmin-production-plugins.min.css",
+		"/home/baraa/sites/projects/devxpro/app/styles/users.css",
+		"/home/baraa/sites/projects/devxpro/app/scripts/lib/app.seed.js",
+		"/home/baraa/sites/projects/devxpro/app/views/users/users.hbs",
+		"/home/baraa/sites/projects/devxpro/app/views/users/index.html",
+		"/home/baraa/sites/projects/devxpro/app/styles/main.scss",
+		"/home/baraa/sites/projects/devxpro/gulpfile.js",
+		"/home/baraa/sites/projects/devxpro/app/styles/lib/smartadmin-production.min.css",
+		"/home/baraa/sites/preview/db.json",
+		"/home/baraa/sites/projects/devxpro/app/scripts/mod/load.js",
+		"/home/baraa/sites/projects/devxpro/app/scripts/script.js",
+		"/home/baraa/sites/projects/devxpro/app/scripts/mod/util.js",
+		"/home/baraa/sites/projects/plugins/smartLoad/app/scripts/load.js",
+		"/home/baraa/sites/projects/devxpro/.babelrc",
+		"/home/baraa/sites/projects/devxpro/app/modules/util.js",
+		"/home/baraa/sites/projects/plugins/smartLoad/app/scripts/util.js",
+		"/home/baraa/sites/projects/devxpro/app/scripts/test.js",
+		"/home/baraa/sites/projects/devxpro/app/views/dashboard/dashboard.hbs",
+		"/home/baraa/sites/projects/devxpro/app/views/dashboard/index.html",
+		"/home/baraa/sites/projects/devxpro/app/scripts/get-script.js",
+		"/home/baraa/sites/projects/devxpro/bower_components/loadcss/src/cssrelpreload.js",
+		"/home/baraa/sites/projects/devxpro/bower_components/loadcss/src/onloadCSS.js",
+		"/home/baraa/sites/projects/devxpro/bower_components/loadcss/src/loadCSS.js",
+		"/home/baraa/sites/projects/devxpro/bower.json",
+		"/home/baraa/Desktop/AJAX_seedProject/index.html",
+		"/home/baraa/sites/projects/devxpro/app/styles/lib/smartadmin-skins.min.css",
+		"/home/baraa/sites/projects/devxpro/app/styles/lib/lockscreen.min.css",
+		"/home/baraa/.bashrc",
+		"/home/baraa/.bash_aliases",
+		"/home/baraa/.zshrc",
+		"/home/baraa/sites/projects/devxpro/app/views/test.hbs",
+		"/home/baraa/sites/projects/devxpro/package.json",
+		"/home/baraa/sites/preview/js/app.seed.js",
+		"/home/baraa/sites/projects/plugins/smartLoad/package.json",
+		"/home/baraa/sites/projects/plugins/smartLoad/app/scripts/main.js",
+		"/home/baraa/sites/projects/devxpro/ertaqy/app/scripts/util.js",
+		"/home/baraa/Documents/newproj/crawler.js",
+		"/home/baraa/sites/projects/devxpro/ertaqy/gulpfile.js",
+		"/home/baraa/sites/projects/plugins/smartLoad/.babelrc",
+		"/home/baraa/sites/preview/js/libs/cookies.min.js",
+		"/home/baraa/sites/preview/login.html",
+		"/home/baraa/sites/preview/ajax/contact.html",
+		"/home/baraa/sites/preview/scripts.html",
+		"/home/baraa/sites/preview/index.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 106.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"args",
+			"Aee",
+			"A",
+			"pug",
+			"cmsModule",
+			"\"indent_size\": 4,",
+			"settings",
+			"settingsComponent",
+			"md-toolbar",
+			"app",
+			"ngMaterial",
+			"angular",
+			"animate",
+			"aria",
+			"app-root",
+			"root",
+			"Home",
+			"id",
+			"list",
+			"nd (",
+			": function ",
+			"none",
+			"scss",
+			"consile",
+			"hello",
+			"Foo",
+			"foo",
+			"  ",
+			"App",
+			"bar",
+			"VueRouter",
+			"var",
+			"Vue",
+			"VueRouter",
+			"applet",
+			"+",
+			"\n+const",
+			"+",
+			".nav-tabs",
+			"nav-tabs",
+			"f5",
+			"f5f5f5",
+			"5",
+			"x",
+			"sssss",
+			"<button",
+			"a",
+			"'",
+			"{\"del\" : \"some url\",\"add\" : \"some url\"}",
+			"actions",
+			"home",
+			"del",
+			"actions",
+			"text",
+			"users",
+			"folder",
+			"img/",
+			"male",
+			"0",
+			"treeview",
+			"img/",
+			"jarvisWidgets",
+			"loadURL",
+			"users",
+			"this.",
+			"fname",
+			"foo",
+			"password",
+			"lname",
+			"mashaal",
+			"baraa",
+			"fname",
+			"username",
+			"posts",
+			"email",
+			"Row",
+			"Row 1",
+			"views",
+			"#views",
+			"Blank",
+			"pushToHistory",
+			"success",
+			"url",
+			"this.typeof(obj)",
+			"event",
+			"ertaqy",
+			"Ertaqy",
+			"loadurl",
+			"requist",
+			"url",
+			"args",
+			"AnotherClass",
+			"constructor",
+			"load",
+			"loadsc",
+			"dash",
+			"#ajax",
+			" ajax",
+			" ajax/dashboard.html",
+			"dashboard",
+			"#ajax",
+			"-webfont.woff2",
+			"fontawesome-webfont",
+			"fontawesome-webfont.woff2",
+			"fontawesome",
+			"font-awesome",
+			"es/",
+			"les/",
+			"styles/",
+			"img/",
+			"js/",
+			"js/a",
+			"js",
+			"img",
+			"img/",
+			"css",
+			"css/",
+			"css/b",
+			"css",
+			"js",
+			"Honukai",
+			"blinks",
+			"templates",
+			"MyApp",
+			"bundle",
+			"templates",
+			"/templa",
+			"templates"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" images/",
+			" ",
+			"image"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ertaqy.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app",
+				"src/App.vue"
+			],
+			[
+				"html",
+				"index.html"
+			],
+			[
+				"main",
+				"scripts/main.js"
+			],
+			[
+				"gl",
+				"styles/_global.scss"
+			],
+			[
+				"mas",
+				"layouts/master.jade"
+			],
+			[
+				"scss",
+				"styles/dashboard.scss"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"util",
+				"scripts/mod/util.js"
+			],
+			[
+				"mai",
+				"scripts/main.js"
+			],
+			[
+				"u",
+				"scripts/util.js"
+			],
+			[
+				"you",
+				"css/your_style.css"
+			],
+			[
+				"",
+				"index.html"
+			],
+			[
+				"lo",
+				"login.html"
+			],
+			[
+				"yo",
+				"css/your_style.css"
+			],
+			[
+				"lis",
+				"views/pages/blog/lists.jade"
+			],
+			[
+				"post",
+				"views/pages/blog/post.jade"
+			],
+			[
+				"pf",
+				"styles/pf.scss"
+			],
+			[
+				"pos",
+				"styles/pf/posts.scss"
+			],
+			[
+				"qou",
+				"styles/pf/quotes.scss"
+			],
+			[
+				"why",
+				"views/pages/blog/why.jade"
+			],
+			[
+				"q&",
+				"views/pages/blog/q&a.jade"
+			],
+			[
+				"blomas",
+				"views/layouts/blog-master.jade"
+			],
+			[
+				"lists",
+				"styles/pf/lists.scss"
+			],
+			[
+				"lisjad",
+				"views/pages/blog/lists.jade"
+			],
+			[
+				"how",
+				"views/pages/blog/how2.jade"
+			],
+			[
+				"cft",
+				"styles/cft.scss"
+			],
+			[
+				"blog",
+				"blog.html"
+			],
+			[
+				"blogm",
+				"views/layouts/blog-master.jade"
+			],
+			[
+				"blm",
+				"views/layouts/blog-master.jade"
+			],
+			[
+				"bma",
+				"views/layouts/blog-master.jade"
+			],
+			[
+				"ini",
+				"scripts/init.js"
+			],
+			[
+				"users",
+				"templates/pages/view/users.jade"
+			],
+			[
+				"index",
+				"templates/pages/index.jade"
+			],
+			[
+				"mast",
+				"views/layouts/master.jade"
+			],
+			[
+				"boo",
+				"scripts/boot.js"
+			],
+			[
+				"ma",
+				"scripts/main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 265.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 335.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

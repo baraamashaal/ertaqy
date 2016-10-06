@@ -1,0 +1,18 @@
+md-toolbar.md-tall
+    h2.md-toolbar-tools
+      span Toolbar: tall (md-accent)
+      md-menu
+        md-button.md-icon-button(aria-label='Open phone interactions menu', ng-click='')
+          md-icon menu
+        md-menu-content(width='4')
+          md-menu-item
+            md-button(ng-click='')
+              md-icon call
+          md-menu-item
+            md-button(disabled='disabled', ng-click='')
+              md-icon voicemail
+          md-menu-divider
+          md-menu-item
+            md-button(ng-click='')
+              md-icon notifications
+

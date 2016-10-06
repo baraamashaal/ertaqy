@@ -6,9 +6,11 @@ import ngMaterial from 'angular-material';
 
 import appComponent from './app.component';
 
-import dashboardModule from './dashboard/dashboard';
+// import dashboardModule from './dashboard/dashboard';
 import cmsModule from './cms/cms';
 
+import sidenavDirective from './directives/sidenav/sidenav';
+import appbarDirective from './directives/appbar/appbar';
 import 'angular-material/angular-material.css';
 
 let appModule = angular
@@ -17,11 +19,11 @@ let appModule = angular
     ngMaterial,
     // Common,
     // Components
-    dashboardModule,
+    // dashboardModule,
     cmsModule
 
   ])
-  .config(($locationProvider, $stateProvider, $urlRouterProvider) => {
+  .config(($locationProvider, $stateProvider, $urlRouterProvider, $mdThemingProvider) => {
     "ngInject";
     // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
     // #how-to-configure-your-server-to-work-with-html5mode
@@ -29,8 +31,14 @@ let appModule = angular
 
     $urlRouterProvider.otherwise('/');
 
+    $mdThemingProvider.theme('default')
+      .primaryPalette('pink')
+      .accentPalette('orange');
+    $mdThemingProvider.theme('default').dark();
   })
   .component('app', appComponent)
+  .directive('sidenav', sidenavDirective)
+  .directive('appbar', appbarDirective)
   .name;
 
 export default appModule;
