@@ -1,13 +1,18 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import dashboardComponent from './dashboard.component';
+import cmsDashboardComponent from './dashboard.component';
 
-let dashboardModule = angular.module('dashboard', [
-  uiRouter
-])
+export default angular.module('app.cms.dashboard', [
+    uiRouter
+  ])
+  .config(function ($stateProvider) {
+    'ngInject'
+    $stateProvider
+      .state('cms.dashboard', {
+        url: '',
+        component: 'cmsDashboard'
+      })
+  })
+  .component('cmsDashboard', cmsDashboardComponent)
+  .name;
 
-.component('dashboard', dashboardComponent)
-
-.name;
-
-export default dashboardModule;

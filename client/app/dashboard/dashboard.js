@@ -6,7 +6,7 @@ let dashboardModule = angular.module('app.dashboard', [
   uiRouter
 ])
 
-.config(function($stateProvider) {
+.config(function ($stateProvider) {
   'ngInject'
 
   $stateProvider

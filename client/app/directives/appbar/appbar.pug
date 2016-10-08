@@ -1,4 +1,4 @@
-md-toolbar.md-tall
+md-toolbar(md-whiteframe="5" ng-class='$ctrl.appbarTabs ? "md-tall" : ""')
   h2.md-toolbar-tools
     md-button.md-icon-button(aria-label='hi there',ng-hide='$ctrl.appNavState()', ng-click='$ctrl.openAppNav()')
       md-icon &#xE5D2;

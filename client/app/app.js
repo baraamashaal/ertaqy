@@ -5,10 +5,10 @@ import ngMaterial from 'angular-material';
 // import Components from './components/components';
 
 
-// import dashboardModule from './dashboard/dashboard';
+import dashboardModule from './dashboard/dashboard';
 import cmsModule from './cms/cms';
 
-import sidenavDirective from './directives/sidenav/sidenav';
+import appnavDirective from './directives/appnav/appnav';
 import appbarDirective from './directives/appbar/appbar';
 import 'angular-material/angular-material.css';
 
@@ -20,7 +20,7 @@ let appModule = angular
     ngMaterial,
     // Common,
     // Components
-    // dashboardModule,
+    dashboardModule,
     cmsModule
 
   ])
@@ -33,13 +33,13 @@ let appModule = angular
     $urlRouterProvider.otherwise('/');
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('pink')
-      .accentPalette('orange');
+      .primaryPalette('teal')
+      .accentPalette('pink');
     // $mdThemingProvider.theme('default').dark();
   })
   .component('app', appComponent)
-  .directive('app-nav', sidenavDirective)
-  .directive('appbar', appbarDirective)
+  .directive('appNav', appnavDirective)
+  .directive('appBar', appbarDirective)
   .name;
 
 export default appModule;
