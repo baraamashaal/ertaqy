@@ -34,7 +34,7 @@ let appModule = angular
 
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')
-      .accentPalette('pink');
+      .accentPalette('blue');
     // $mdThemingProvider.theme('default').dark();
   })
   .component('app', appComponent)

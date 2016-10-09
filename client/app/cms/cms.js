@@ -5,13 +5,15 @@ import cmsComponent from './cms.component';
 import cmsDashboardModule from './dashboard/dashboard';
 import cmsSiteModule from './site/site';
 import cmsSettingsModule from './settings/settings';
+import cmsBlogModule from './blog/blog';
 
 export default angular.module('app.cms', [
     uiRouter,
 
     cmsDashboardModule,
     cmsSiteModule,
-    cmsSettingsModule
+    cmsSettingsModule,
+    cmsBlogModule
   ])
   .config(function ($stateProvider) {
     'ngInject'

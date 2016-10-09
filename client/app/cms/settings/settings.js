@@ -2,8 +2,11 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import settingsComponent from './settings.component';
 
+import generalModule from './general/general';
+
 export default angular.module('cms.settings', [
-    uiRouter
+    uiRouter,
+    generalModule
   ])
   .config(function ($stateProvider) {
     'ngInject'
@@ -11,9 +14,7 @@ export default angular.module('cms.settings', [
       .state('cms.settings', {
         url: '/settings',
         component: 'cmsSettings',
-        data: {
-          appbarTabs: true
-        }
+        abstract: true
       })
   })
   .component('cmsSettings', settingsComponent)
