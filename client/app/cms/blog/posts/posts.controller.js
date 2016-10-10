@@ -6,6 +6,190 @@ export default class PostsController {
     this.name = 'posts';
     this.selectedRows = [];
     this.isEmptyRows = true;
+
+    this.posts = [{
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, {
+      title: 'first post',
+      status: 'active',
+      auther: 'baraa mashaal',
+      comments: 10,
+      date: '12/10/2016',
+      url: 'blog/posts/1'
+    }, ]
   }
 
   isSelectedRows() {

@@ -13,7 +13,7 @@ md-card
       span Nutrition
       div(flex='')
       md-button.md-icon-button(ng-click='')
-      md-icon refresh
+        md-icon refresh
     .md-toolbar-tools(ng-if='$ctrl.isSelectedRows()')
       span {{$ctrl.selectedRows.length}} {{$ctrl.selectedRows.length > 1 ? 'items' : 'item'}} selected
   md-table-container
@@ -33,18 +33,11 @@ md-card
           th(md-column,)
             span url
       tbody(md-body)
-        tr(md-row, md-select='post', md-on-select='$ctrl.onSelect', md-auto-select, ng-disabled='post.calories.value > 400', ng-repeat='post in $ctrl.posts | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit')
-          td(md-cell) {{post.name}}
-          td(md-cell)
-            md-select(ng-model='post.type', placeholder='Other')
-              md-option(ng-value='type', ng-repeat='type in getTypes()') {{type}}
-          td(md-cell) {{post.calories.value}}
-          td(md-cell) {{post.fat.value | number: 2}}
-          td(md-cell) {{post.carbs.value}}
-          td(md-cell) {{post.protein.value | number: 2}}
-          td(md-cell, hide-gt-xs='', show-gt-md='') {{post.sodium.value}}
-          td(md-cell, hide-gt-xs='', show-gt-lg='') {{post.calcium.value}}%
-          td(md-cell, hide-gt-xs='', show-gt-lg='') {{post.iron.value}}%
-          td(md-cell, ng-click='editComment($event, dessert)', ng-class="{'md-placeholder': !post.comment}")
-            | {{post.comment || 'Add a comment'}}
-  //- md-table-pagination(md-limit='query.limit', md-limit-options='limitOptions', md-page='query.page', md-total='{{desserts.count}}', md-page-select='options.pageSelect', md-boundary-links='options.boundaryLinks', md-on-paginate='logPagination')
+        tr(md-row, md-select='post', md-on-select='$ctrl.onSelect', md-auto-select, ng-disabled='post.calories.value > 400', ng-repeat='post in $ctrl.posts | filter: filter.search | orderBy: query.order | limitTo: 5 : (query.page -1) * query.limit')
+          td(md-cell) {{ post.title }}
+          td(md-cell) {{ post.status }}
+          td(md-cell) {{ post.auther }}
+          td(md-cell) {{ post.comments }}
+          td(md-cell) {{ post.date }}
+          td(md-cell) {{ post.url }}
+  md-table-pagination(md-limit='5', md-limit-options='limitOptions', md-page='1', md-total='{{ $ctrl.posts.length }}', md-page-select='[5,10,15]', md-boundary-links='options.boundaryLinks', md-on-paginate='logPagination')

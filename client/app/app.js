@@ -14,7 +14,7 @@ import 'angular-material/angular-material.css';
 
 import appComponent from './app.component';
 
-let appModule = angular
+export default angular
   .module('app', [
     uiRouter,
     ngMaterial,
@@ -41,6 +41,4 @@ let appModule = angular
   .directive('appNav', appnavDirective)
   .directive('appBar', appbarDirective)
   .name;
-
-export default appModule;
 
