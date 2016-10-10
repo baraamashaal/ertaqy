@@ -40,5 +40,6 @@ export default angular
   .component('app', appComponent)
   .directive('appNav', appnavDirective)
   .directive('appBar', appbarDirective)
+  .constant('API_URL_ROOT', 'http://localhost:9999')
   .name;
 

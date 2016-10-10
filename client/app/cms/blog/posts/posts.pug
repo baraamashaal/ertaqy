@@ -16,7 +16,28 @@ md-card
         md-icon refresh
     .md-toolbar-tools(ng-if='$ctrl.isSelectedRows()')
       span {{$ctrl.selectedRows.length}} {{$ctrl.selectedRows.length > 1 ? 'items' : 'item'}} selected
-  md-table-container
+  
+  mdt-table
+    mdt-header-row
+      mdt-column(align-rule='left') Dessert (100g serving)
+      mdt-column(align-rule='right') Calories
+      mdt-column(align-rule='right') Fat (g)
+      mdt-column(align-rule='right') Carbs (g)
+      mdt-column(align-rule='right') Protein (g)
+      mdt-column(align-rule='right') Sodium (mg)
+      mdt-column(align-rule='right') Calcium (%)
+      mdt-column(align-rule='right') Iron (%)
+    mdt-row(ng-repeat='nutrition in nutritionList')
+      mdt-cell {{nutrition.name}}
+      mdt-cell {{nutrition.calories}}
+      mdt-cell {{nutrition.fat}}
+      mdt-cell {{nutrition.carbs}}
+      mdt-cell {{nutrition.protein}}
+      mdt-cell {{nutrition.sodium}}
+      mdt-cell {{nutrition.calcium}}
+      mdt-cell {{nutrition.iron}}
+
+  //- md-table-container
     table(md-table, md-row-select, multiple, md-progress='promise')
       thead(md-head, md-on-reorder='$ctrl.onreOrder')
         tr(md-row)
@@ -40,4 +61,4 @@ md-card
           td(md-cell) {{ post.comments }}
           td(md-cell) {{ post.date }}
           td(md-cell) {{ post.url }}
-  md-table-pagination(md-limit='5', md-limit-options='limitOptions', md-page='1', md-total='{{ $ctrl.posts.length }}', md-page-select='[5,10,15]', md-boundary-links='options.boundaryLinks', md-on-paginate='logPagination')
+  //- md-table-pagination(md-limit='5', md-limit-options='limitOptions', md-page='1', md-total='{{ $ctrl.posts.length }}', md-page-select='[5,10,15]', md-boundary-links='options.boundaryLinks', md-on-paginate='logPagination')

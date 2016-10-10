@@ -10,6 +10,7 @@
     "angular-material": "^1.1.1",
     "angular-material-data-table": "^0.10.9",
     "angular-ui-router": "^1.0.0-beta.1",
+    "md-data-table": "^1.8.0",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {

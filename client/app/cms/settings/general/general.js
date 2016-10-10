@@ -1,13 +1,11 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import generalComponent from './general.component';
-import ngTable from 'angular-material-data-table';
 
-import 'angular-material-data-table/dist/md-data-table.min.css';
+// import 'angular-material-data-table/dist/md-data-table.min.css';
 
 export default angular.module('app.cms.settings.general', [
     uiRouter,
-    ngTable
   ])
   .config(function ($stateProvider) {
     'ngInject'
