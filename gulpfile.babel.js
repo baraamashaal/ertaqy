@@ -1,21 +1,21 @@
 'use strict';
 
-import gulp     from 'gulp';
-import webpack  from 'webpack';
-import path     from 'path';
-import sync     from 'run-sequence';
-import rename   from 'gulp-rename';
+import gulp from 'gulp';
+import webpack from 'webpack';
+import path from 'path';
+import sync from 'run-sequence';
+import rename from 'gulp-rename';
 import template from 'gulp-template';
-import fs       from 'fs';
-import yargs    from 'yargs';
-import lodash   from 'lodash';
-import gutil    from 'gulp-util';
-import serve    from 'browser-sync';
-import del      from 'del';
+import fs from 'fs';
+import yargs from 'yargs';
+import lodash from 'lodash';
+import gutil from 'gulp-util';
+import serve from 'browser-sync';
+import del from 'del';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import colorsSupported      from 'supports-color';
-import historyApiFallback   from 'connect-history-api-fallback';
+import colorsSupported from 'supports-color';
+import historyApiFallback from 'connect-history-api-fallback';
 
 let root = 'client';
 
@@ -51,7 +51,7 @@ gulp.task('webpack', ['clean'], (cb) => {
   config.entry.app = paths.entry;
 
   webpack(config, (err, stats) => {
-    if(err)  {
+    if (err) {
       throw new gutil.PluginError("webpack", err);
     }
 
@@ -79,7 +79,7 @@ gulp.task('serve', () => {
   serve({
     port: process.env.PORT || 3000,
     open: false,
-    server: {baseDir: root},
+    server: { baseDir: root },
     middleware: [
       historyApiFallback(),
       webpackDevMiddleware(compiler, {
@@ -124,3 +124,4 @@ gulp.task('clean', (cb) => {
 });
 
 gulp.task('default', ['watch']);
+

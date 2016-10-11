@@ -1,64 +1,101 @@
-md-card
-  //- md-toolbar.md-table-toolbar.md-default(ng-hide='$ctrl.isSelectedRows()')
-    .md-toolbar-tools
-      span Nutrition
-      div(flex='')
-      md-button.md-icon-button(ng-click='loadStuff()')
-        md-icon refresh
-  //- md-toolbar.md-table-toolbar.alternate(ng-show='options.rowSelection && selected.length')
-    .md-toolbar-tools
-      span {{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected
-  md-toolbar.md-table-toolbar(ng-class='$ctrl.isSelectedRows() ? "alternate" : "md-default"')
-    .md-toolbar-tools(ng-if='! $ctrl.isSelectedRows()')
-      span Nutrition
-      div(flex='')
-      md-button.md-icon-button(ng-click='')
-        md-icon refresh
-    .md-toolbar-tools(ng-if='$ctrl.isSelectedRows()')
-      span {{$ctrl.selectedRows.length}} {{$ctrl.selectedRows.length > 1 ? 'items' : 'item'}} selected
-  
-  mdt-table
-    mdt-header-row
-      mdt-column(align-rule='left') Dessert (100g serving)
-      mdt-column(align-rule='right') Calories
-      mdt-column(align-rule='right') Fat (g)
-      mdt-column(align-rule='right') Carbs (g)
-      mdt-column(align-rule='right') Protein (g)
-      mdt-column(align-rule='right') Sodium (mg)
-      mdt-column(align-rule='right') Calcium (%)
-      mdt-column(align-rule='right') Iron (%)
-    mdt-row(ng-repeat='nutrition in nutritionList')
-      mdt-cell {{nutrition.name}}
-      mdt-cell {{nutrition.calories}}
-      mdt-cell {{nutrition.fat}}
-      mdt-cell {{nutrition.carbs}}
-      mdt-cell {{nutrition.protein}}
-      mdt-cell {{nutrition.sodium}}
-      mdt-cell {{nutrition.calcium}}
-      mdt-cell {{nutrition.iron}}
+//- md-card
 
-  //- md-table-container
-    table(md-table, md-row-select, multiple, md-progress='promise')
-      thead(md-head, md-on-reorder='$ctrl.onreOrder')
-        tr(md-row)
-          th(md-column,)
-            span title
-          th(md-column,)
-            span status
-          th(md-column,)
-            span auther
-          th(md-column,)
-            span comments
-          th(md-column,)
-            span date
-          th(md-column,)
-            span url
-      tbody(md-body)
-        tr(md-row, md-select='post', md-on-select='$ctrl.onSelect', md-auto-select, ng-disabled='post.calories.value > 400', ng-repeat='post in $ctrl.posts | filter: filter.search | orderBy: query.order | limitTo: 5 : (query.page -1) * query.limit')
-          td(md-cell) {{ post.title }}
-          td(md-cell) {{ post.status }}
-          td(md-cell) {{ post.auther }}
-          td(md-cell) {{ post.comments }}
-          td(md-cell) {{ post.date }}
-          td(md-cell) {{ post.url }}
-  //- md-table-pagination(md-limit='5', md-limit-options='limitOptions', md-page='1', md-total='{{ $ctrl.posts.length }}', md-page-select='[5,10,15]', md-boundary-links='options.boundaryLinks', md-on-paginate='logPagination')
+//-   // default toolbar 
+//-   //- md-toolbar.md-table-toolbar.md-default(ng-hide='$ctrl.selectedRecords.length || $ctrl.filter.show')
+//-     .md-toolbar-tools
+//-       h2.md-title Nutrition
+//-       div(flex='')
+//-       md-button.md-icon-button(ng-click='$ctrl.filter.show = true')
+//-         md-icon filter_list
+//-       md-button.md-icon-button(ng-click='$ctrl.newRecord($event)')
+//-         md-icon local_dining
+  
+//-   // search toolbar
+//-   //- md-toolbar.md-table-toolbar.md-default(ng-show='$ctrl.filter.show && !$ctrl.selectedRecords.length')
+//-     .md-toolbar-tools
+//-       md-icon search
+//-       form(flex='', name='filter.form')
+//-         input(type='text', ng-model='$ctrl.query.filter', ng-model-options='$ctrl.filter.options', placeholder='search')
+//-       md-button.md-icon-button(ng-click='$ctrl.removeFilter()')
+//-         md-icon close
+
+//-   // on select helper toolbar
+//-   //- md-toolbar.md-table-toolbar.alternate(ng-show='$ctrl.selectedRecords.length')
+//-     .md-toolbar-tools(layout-align='space-between')
+//-       div {{$ctrl.selectedRecords.length}} {{$ctrl.selectedRecords.length > 1 ? 'items' : 'item'}} selected
+//-       md-button.md-icon-button(ng-click='$ctrl.delete($event)')
+//-         md-icon delete
+  
+//-   //- md-toolbar.md-table-toolbar
+
+//-   md-table-container
+//-     table(md-table, md-row-select, multiple, ng-model='$ctrl.selectedRecords', md-progress='$ctrl.promise')
+//-       thead(md-head, md-order='$ctrl.query.order', md-on-reorder='$ctrl.getPosts')
+//-         tr(md-row)
+//-           th(md-column, md-order-by='nameToLower')
+//-             span Dessert (100g serving)
+//-           th(md-column, md-numeric, md-order-by='calories.value')
+//-             span Calories
+//-           th(md-column, md-numeric) Fat (g)
+//-           th(md-column, md-numeric) Carbs (g)
+//-           th(md-column, md-numeric) Protein (g)
+//-           th(md-column, md-numeric) Sodium (mg)
+//-           th(md-column, md-numeric) Calcium (%)
+//-           th(md-column, md-numeric) Iron (%)
+//-       tbody(md-body)
+//-         tr(md-row, md-select='dessert', md-select-id='name', md-auto-select, ng-repeat='post in $ctrl.posts.data')
+//-           td(md-cell) {{post.name}}
+//-           td(md-cell) {{post.calories.value}}
+//-           td(md-cell) {{post.fat.value | number: 1}}
+//-           td(md-cell) {{post.carbs.value}}
+//-           td(md-cell) {{post.protein.value | number: 1}}
+//-           td(md-cell) {{post.sodium.value}}
+//-           td(md-cell) {{post.calcium.value}}{{post.calcium.unit}}
+//-           td(md-cell) {{post.iron.value}}{{post.iron.unit}}
+//-   md-table-pagination(md-limit='$ctrl.query.limit', md-limit-options='[5, 10, 15]', md-page='$ctrl.query.page', md-total='{{$ctrl.posts.count}}', md-on-paginate='$ctrl.getPosts', md-page-select)
+md-card
+  md-toolbar.md-table-toolbar.md-default(ng-hide='selected.length || filter.show')
+    .md-toolbar-tools
+      h2.md-title Nutrition
+      div(flex='')
+      md-button.md-icon-button(ng-click='filter.show = true')
+        md-icon filter_list
+      md-button.md-icon-button(ng-click='addItem($event)')
+        md-icon local_dining
+  md-toolbar.md-table-toolbar.md-default(ng-show='filter.show && !selected.length')
+    .md-toolbar-tools
+      md-icon search
+      form(flex='', name='filter.form')
+        input(type='text', ng-model='query.filter', ng-model-options='filter.options', placeholder='search')
+      md-button.md-icon-button(ng-click='removeFilter()')
+        md-icon close
+  md-toolbar.md-table-toolbar.alternate(ng-show='selected.length')
+    .md-toolbar-tools(layout-align='space-between')
+      div {{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected
+      md-button.md-icon-button(ng-click='delete($event)')
+        md-icon delete
+  md-table-container
+    table(md-table='', md-row-select='', multiple='', ng-model='selected', md-progress='promise')
+      thead(md-head='', md-order='query.order', md-on-reorder='getDesserts')
+        tr(md-row='')
+          th(md-column='', md-order-by='nameToLower')
+            span Dessert (100g serving)
+          th(md-column='', md-numeric='', md-order-by='calories.value')
+            span Calories
+          th(md-column='', md-numeric='') Fat (g)
+          th(md-column='', md-numeric='') Carbs (g)
+          th(md-column='', md-numeric='') Protein (g)
+          th(md-column='', md-numeric='') Sodium (mg)
+          th(md-column='', md-numeric='') Calcium (%)
+          th(md-column='', md-numeric='') Iron (%)
+      tbody(md-body='')
+        tr(md-row='', md-select='dessert', md-select-id='name', md-auto-select='', ng-repeat='dessert in desserts')
+          td(md-cell='') {{dessert.name}}
+          td(md-cell='') {{dessert.calories.value}}
+          td(md-cell='') {{dessert.fat.value | number: 1}}
+          td(md-cell='') {{dessert.carbs.value}}
+          td(md-cell='') {{dessert.protein.value | number: 1}}
+          td(md-cell='') {{dessert.sodium.value}}
+          td(md-cell='') {{dessert.calcium.value}}{{dessert.calcium.unit}}
+          td(md-cell='') {{dessert.iron.value}}{{dessert.iron.unit}}
+  md-table-pagination(md-limit='query._limit', md-limit-options='[5, 10, 15]', md-page='query._page', md-total='2600', md-on-paginate='getDesserts', md-page-select='')

@@ -10,3 +10,4 @@ let postsComponent = {
 };
 
 export default postsComponent;
+

@@ -1,24 +1,31 @@
-import angular from 'angular';
+// import angular from 'angular';
 
-export default function ($http, API_URL_ROOT) {
+// export default function ($http, API_URL_ROOT) {
+//   'ngInject';
+
+//   const Route = `${API_URL_ROOT}/posts/`
+
+//   return {
+//     get(id) {
+//       return $http.get(Route + (angular.isNumber(id) ? id : ''))
+//     },
+//     add(post) {
+//       return $http.post(Route, post)
+//     },
+//     update(post) {
+//       return $http.put(Route + post.id, post)
+//     },
+//     delete(id) {
+//       return $http.delete(Route + post.id)
+//     }
+//   };
+
+// }
+
+export default function ($resource) {
   'ngInject';
-
-  const Route = `${API_URL_ROOT}/posts/`
-
   return {
-    get(id) {
-      return $http.get(Route + (angular.isNumber(id) ? id : ''))
-    },
-    add(post) {
-      return $http.post(Route, post)
-    },
-    update(post) {
-      return $http.put(Route + post.id, post)
-    },
-    delete(id) {
-      return $http.delete(Route + post.id)
-    }
+    desserts: $resource('http://localhost:8888/desserts/:id')
   };
-
 }
 
