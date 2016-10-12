@@ -84,113 +84,178 @@ import newRecordTemplate from './newRecord/newRecord.pug';
 
 // }
 
-export default function ($mdDialog, $nutrition, $scope) {
-  'ngInject'
+// export default function ($mdDialog, $nutrition, $scope) {
+//   'ngInject'
 
-  var bookmark;
+//   var bookmark;
 
-  $scope.selected = [];
+//   $scope.selected = [];
 
-  $scope.filter = {
-    options: {
-      debounce: 500
-    }
-  };
+//   $scope.filter = {
+//     options: {
+//       debounce: 500
+//     }
+//   };
 
-  $scope.query = {
-    filter: '',
-    _limit: '5',
-    order: 'nameToLower',
-    _page: 1
-  };
+//   $scope.query = {
+//     q: '',
+//     _limit: '5',
+//     order: 'nameToLower',
+//     _page: 1
+//   };
 
-  function success(desserts) {
-    $scope.desserts = desserts;
+//   function success(desserts) {
+//     $scope.desserts = desserts;
+//   }
+
+//   $scope.addItem = function (event) {
+//     $mdDialog.show({
+//       clickOutsideToClose: true,
+//       controller: newRecordController,
+//       controllerAs: 'ctrl',
+//       focusOnOpen: false,
+//       targetEvent: event,
+//       template: newRecordTemplate,
+//     }).then($scope.getDesserts);
+//   };
+
+//   $scope.delete = function (event) {
+//     $mdDialog.show({
+//       clickOutsideToClose: true,
+//       controller: newRecordController,
+//       controllerAs: 'ctrl',
+//       focusOnOpen: false,
+//       targetEvent: event,
+//       locals: { desserts: $scope.selected },
+//       template: newRecordTemplate,
+//     }).then($scope.getDesserts);
+//   };
+
+//   $scope.getDesserts = function () {
+//     $scope.promise = $nutrition.desserts.query($scope.query, success).$promise.then(function () {
+//       console.log('done');
+//     }, function () {
+//       console.log('fail');
+//     });
+//     console.log('$scope.promise', $scope.promise);
+//   };
+
+//   $scope.removeFilter = function () {
+//     $scope.filter.show = false;
+//     $scope.query.q = '';
+
+//     if ($scope.filter.form.$dirty) {
+//       $scope.filter.form.$setPristine();
+//     }
+//   };
+
+//   $scope.$watch('query.q', function (newValue, oldValue) {
+//     if (!oldValue) {
+//       bookmark = $scope.query._page;
+//     }
+
+//     if (newValue !== oldValue) {
+//       $scope.query._page = 1;
+//     }
+
+//     if (!newValue) {
+//       $scope.query._page = bookmark;
+//     }
+
+//     $scope.getDesserts();
+//   });
+// }
+
+// export default class PostsController {
+//   constructor($mdDialog, $posts, $scope) {
+//     'ngInject'
+//     this.$mdDialog = $mdDialog;
+//     this.$posts = $posts;
+//     this.$scope = $scope;
+
+//     this.selectedRecords = [];
+
+//     this.filter = {
+//       options: {
+//         debounce: 500
+//       }
+//     }
+//     this.query = {
+//       _limit: 10,
+//       _page: 1
+//     }
+//     this.tableMode = this._setTableMode()
+
+//     $scope.$watch(() => this.query.filter, function (newValue, oldValue, scope) {
+
+//     });
+
+//   }
+
+//   isDefaultMode() {
+//     return !(this.isSelectMode() || this.isSearchMode()) ? true : false
+//   }
+
+//   isSelectMode() {
+//     return this.selectedRecordsCount() ? true : true;
+//   }
+
+//   selectedRecordsCount() {
+//     return this.selectedRecords ? this.selectedRecords.length : null;
+//   }
+//   _setTableMode() {
+//     return this.isSelectMode() ? 'select-mode' : this.isSearchMode() ? 'filter-mode' : 'md-default default-mode';
+//   }
+
+//   isSearchMode() {
+
+//   }
+
+//   updatePosts(posts) {
+//     this.posts = posts;
+//   }
+
+//   getPosts() {
+//     this.promise = this.$posts.query($scope.query, success).$promise;
+//   }
+
+// }
+
+export default class {
+  tableModes = {
+    default: 'default-mode',
+    search: 'search-mode',
+    select: 'select-mode'
   }
 
-  $scope.addItem = function (event) {
-    $mdDialog.show({
-      clickOutsideToClose: true,
-      controller: 'newRecordController',
-      controllerAs: 'ctrl',
-      focusOnOpen: false,
-      targetEvent: event,
-      template: newRecordTemplate,
-    }).then($scope.getDesserts);
-  };
-
-  $scope.delete = function (event) {
-    $mdDialog.show({
-      clickOutsideToClose: true,
-      controller: 'newRecordController',
-      controllerAs: 'ctrl',
-      focusOnOpen: false,
-      targetEvent: event,
-      locals: { desserts: $scope.selected },
-      template: newRecordTemplate,
-    }).then($scope.getDesserts);
-  };
-
-  $scope.getDesserts = function () {
-    $scope.promise = $nutrition.desserts.query($scope.query, success).$promise;
-  };
-
-  $scope.removeFilter = function () {
-    $scope.filter.show = false;
-    $scope.query.filter = '';
-
-    if ($scope.filter.form.$dirty) {
-      $scope.filter.form.$setPristine();
-    }
-  };
-
-  $scope.$watch('query.filter', function (newValue, oldValue) {
-    if (!oldValue) {
-      bookmark = $scope.query._page;
-    }
-
-    if (newValue !== oldValue) {
-      $scope.query._page = 1;
-    }
-
-    if (!newValue) {
-      $scope.query._page = bookmark;
-    }
-
-    $scope.getDesserts();
-  });
-}
-
-class PostsController {
   constructor($mdDialog, $posts, $scope) {
+    'ngInject'
     this.$mdDialog = $mdDialog;
     this.$posts = $posts;
     this.$scope = $scope;
 
-    this.selected = [];
-    this.filter = {
-      options: {
-        debounce: 500
-      }
-    }
-    this.query = {
-      _limit: 10,
-      _page: 1
-    }
-
-
-    $scope.$watch(() => this.query.filter, function (newValue, oldValue, scope) {
-
-    });
+    this.tableMode = this.tableModes.search;
 
   }
 
-  updatePosts(posts) {
-    this.posts = posts;
+  _setTableMode = function (mode) {
+    this.tableMode = this.tableModes[mode]
   }
 
-  getPosts() {
-    this.promise = this.$posts.query($scope.query, success).$promise;
+  // selectedRecordsCount() {
+  //   return this.selectedRecords && this.selectedRecords.length
+  // }
+
+  isSelectMode() {
+    return this.tableMode === this.tableModes.select
+  }
+
+  isSearchMode() {
+    return this.tableMode === this.tableModes.search
+  }
+
+  isDefaultMode() {
+    return this.tableMode === this.tableModes.default
   }
 
 }

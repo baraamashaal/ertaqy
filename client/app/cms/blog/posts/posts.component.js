@@ -6,7 +6,8 @@ let postsComponent = {
   restrict: 'E',
   bindings: {},
   template,
-  controller
+  controller,
+  // controllerAs: '$posts'
 };
 
 export default postsComponent;

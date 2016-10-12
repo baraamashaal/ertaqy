@@ -21,6 +21,6 @@ export default angular.module('app.cms.blog.posts', [
       })
   })
   .component('posts', postsComponent)
-  .factory('$nutrition', postsFactory)
+  .factory('$posts', postsFactory)
   .name;
 
