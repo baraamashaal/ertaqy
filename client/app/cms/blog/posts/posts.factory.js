@@ -24,8 +24,6 @@
 
 export default function ($resource) {
   'ngInject';
-  return {
-    desserts: $resource('http://localhost:8888/desserts/:id')
-  };
+  return $resource('http://localhost:9999/posts/:id');
 }
 
