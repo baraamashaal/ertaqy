@@ -1,3 +1,6 @@
+// @import '/node_modules/angular-material/angular-material.css';
+@import './styles/anchors';
+
 app
   position relative
   display block
@@ -23,3 +26,27 @@ app
 
 ui-view
   display block
+  
+
+
+
+
+// general theming 
+
+// toolbar
+.md-toolbar-tools
+  .md-title
+    text-transform capitalize
+// end toolbar
+
+
+.status-circle-icon
+  display block
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: #aaa;
+  &.offline
+    background-color #e44e56 
+  &.online
+    background-color #3DC372 

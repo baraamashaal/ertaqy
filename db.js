@@ -5,7 +5,7 @@ module.exports = function () {
     // Create 1000 users
   for (var i = 0; i < 1000; i++) {
     data.posts.push({
-      id: i,
+      id: faker.random.uuid(),
       title: faker.lorem.words(Math.random() < 0.5 ? 3 : 4),
       status: Math.random() < 0.5 ? true : false,
       auther: faker.name.findName(),

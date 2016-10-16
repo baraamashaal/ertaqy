@@ -334,12 +334,27 @@ class PostssssController {
 
 export default class postsController {
   bookmark = null;
-  selectedRecored = [];
-  recordQuery = {
+  selectedRecords = [];
+  recordsQuery = {
     q: '',
-    _limit: '5',
-    order: 'nameToLower',
+    _limit: '10',
+    _sort: 'id',
     _page: 1
+  };
+  tableOptions = {
+    rowSelection: true,
+    multiSelect: true,
+    autoSelect: true,
+    decapitate: false,
+    largeEditDialog: false,
+    boundaryLinks: false,
+    limitSelect: true,
+    pageSelect: true
+  };
+  filter = {
+    options: {
+      debounce: 500
+    }
   };
   tableModes = {
     default: {
@@ -381,24 +396,33 @@ export default class postsController {
   }
 
   _init() {
+    this.getPosts.bind(this);
     this._setTableMode(this.tableModes.default);
 
     this.toolbarTheme = this._setToolbarTheme();
 
-    this.$scope.$watch(() => this.recordQuery.q, (newValue, oldValue) => {
+    this.$scope.$watch(() => this.recordsQuery.q, (newValue, oldValue) => {
       if (!oldValue) {
-        this.bookmark = this.recordQuery._page;
+        this.bookmark = this.recordsQuery._page;
       }
 
       if (newValue !== oldValue) {
-        this.recordQuery._page = 1;
+        this.recordsQuery._page = 1;
       }
 
       if (!newValue) {
-        this.recordQuery._page = this.bookmark;
+        this.recordsQuery._page = this.bookmark;
       }
 
       this.getPosts();
+    });
+    this.$scope.$watch(() => this.selectedRecords.length, (newValue, oldValue) => {
+      if (this.selectedRecords.length > 0) {
+        this._setTableMode(this.tableModes.select)
+      } else {
+        this._setTableMode(this.tableModes.default)
+      }
+      this.toolbarTheme = this._setToolbarTheme();
     });
   }
 
@@ -417,11 +441,11 @@ export default class postsController {
 
   _setToolbarTheme() {
     let theme = {
-      'background-color': 'background'
+      'background-color': 'inherit'
     }
     if (this.currentTableMode.name === this.tableModes.select.name) {
-      theme['background-color'] = 'accent-A200-0.25'
-      theme.color = 'accent-A200'
+      theme['background-color'] = this.$mdColors.getThemeColor('accent-A200-0.25')
+      theme.color = this.$mdColors.getThemeColor('accent-A200')
     }
     return theme;
   }
@@ -430,8 +454,12 @@ export default class postsController {
     this._setTableMode(this.tableModes[mode] || this.currentTableMode);
   }
 
-  getPosts() {
-    this.recordPromise = this.$posts.query(this.recordQuery, this._setPosts.bind(this)).$promise;
+  // getPosts() {
+  //   console.log('this.$posts', this);
+  //   this.recordsPromise = this.$posts.query(this.recordsQuery, this._setPosts.bind(this)).$promise;
+  // }
+  getPosts = (page, limit) => {
+    this.recordsPromise = this.$posts.query(this.recordsQuery, this._setPosts.bind(this)).$promise;
   }
 
   _setPosts(posts) {
