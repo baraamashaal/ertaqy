@@ -1,60 +1,6 @@
-//- md-card
 
-//-   // default toolbar 
-//-   //- md-toolbar.md-table-toolbar.md-default(ng-hide='$ctrl.selectedRecords.length || $ctrl.filter.show')
-//-     .md-toolbar-tools
-//-       h2.md-title Nutrition
-//-       div(flex)
-//-       md-button.md-icon-button(ng-click='$ctrl.filter.show = true')
-//-         md-icon filter_list
-//-       md-button.md-icon-button(ng-click='$ctrl.newRecord($event)')
-//-         md-icon local_dining
-  
-//-   // search toolbar
-//-   //- md-toolbar.md-table-toolbar.md-default(ng-show='$ctrl.filter.show && !$ctrl.selectedRecords.length')
-//-     .md-toolbar-tools
-//-       md-icon search
-//-       form(flex, name='filter.form')
-//-         input(type='text', ng-model='$ctrl.query._filter', ng-model-options='$ctrl.filter.options', placeholder='search')
-//-       md-button.md-icon-button(ng-click='$ctrl.removeFilter()')
-//-         md-icon close
-
-//-   // on select helper toolbar
-//-   //- md-toolbar.md-table-toolbar.alternate(ng-show='$ctrl.selectedRecords.length')
-//-     .md-toolbar-tools(layout-align='space-between')
-//-       div {{$ctrl.selectedRecords.length}} {{$ctrl.selectedRecords.length > 1 ? 'items' : 'item'}} selected
-//-       md-button.md-icon-button(ng-click='$ctrl.delete($event)')
-//-         md-icon delete
-  
-//-   //- md-toolbar.md-table-toolbar
-
-//-   md-table-container
-//-     table(md-table, md-row-select, multiple, ng-model='$ctrl.selectedRecords', md-progress='$ctrl.promise')
-//-       thead(md-head, md-order='$ctrl.query.order', md-on-reorder='$ctrl.getPosts')
-//-         tr(md-row)
-//-           th(md-column, md-order-by='nameToLower')
-//-             span Dessert (100g serving)
-//-           th(md-column, md-numeric, md-order-by='calories.value')
-//-             span Calories
-//-           th(md-column, md-numeric) Fat (g)
-//-           th(md-column, md-numeric) Carbs (g)
-//-           th(md-column, md-numeric) Protein (g)
-//-           th(md-column, md-numeric) Sodium (mg)
-//-           th(md-column, md-numeric) Calcium (%)
-//-           th(md-column, md-numeric) Iron (%)
-//-       tbody(md-body)
-//-         tr(md-row, md-select='dessert', md-select-id='name', md-auto-select, ng-repeat='post in $ctrl.posts.data')
-//-           td(md-cell) {{post.name}}
-//-           td(md-cell) {{post.calories.value}}
-//-           td(md-cell) {{post.fat.value | number: 1}}
-//-           td(md-cell) {{post.carbs.value}}
-//-           td(md-cell) {{post.protein.value | number: 1}}
-//-           td(md-cell) {{post.sodium.value}}
-//-           td(md-cell) {{post.calcium.value}}{{post.calcium.unit}}
-//-           td(md-cell) {{post.iron.value}}{{post.iron.unit}}
-//-   md-table-pagination(md-limit='$ctrl.query.limit', md-limit-options='[5, 10, 15]', md-page='$ctrl.query.page', md-total='{{$ctrl.posts.count}}', md-on-paginate='$ctrl.getPosts', md-page-select)
 md-card
-  md-toolbar.md-table-toolbar.md-menu-toolbar(ng-style='$ctrl.toolbarTheme')
+  md-toolbar.md-table-toolbar.md-menu-toolbar(ng-style='$ctrl.toolbarTheme', ng-class='$ctrl.tableModeClass')
     .md-toolbar-tools(ng-show='$ctrl.tableModes.default.isActive')
       h2.md-title posts
       div(flex)
@@ -70,6 +16,7 @@ md-card
         md-icon close
     .md-toolbar-tools(ng-show='$ctrl.tableModes.select.isActive')
       div {{$ctrl.selectedRecords.length}} {{$ctrl.selectedRecords.length > 1 ? 'items' : 'item'}} selected
+      div(flex)
       md-button.md-icon-button(ng-click='delete($event)')
         md-icon delete
   md-table-container
@@ -96,50 +43,3 @@ md-card
           td(md-cell)
             span.status-circle-icon(ng-class='post.status ? "online" : "offline"')
   md-table-pagination(md-limit='$ctrl.recordsQuery._limit', md-limit-options='[10, 15, 25]', md-page='$ctrl.recordsQuery._page', md-total='1000', md-on-paginate='$ctrl.getPosts', md-page-select)
-//- md-card
-  md-toolbar.md-table-toolbar.md-default(ng-hide='selected.length || filter.show')
-    .md-toolbar-tools
-      h2.md-title Nutrition
-      div(flex)
-      md-button.md-icon-button(ng-click='filter.show = true')
-        md-icon filter_list
-      md-button.md-icon-button(ng-click='addItem($event)')
-        md-icon local_dining
-  md-toolbar.md-table-toolbar.md-default(ng-show='filter.show && !selected.length')
-    .md-toolbar-tools
-      md-icon search
-      form(flex, name='filter.form')
-        input(type='text', ng-model='query.q', ng-model-options='filter.options', placeholder='search')
-      md-button.md-icon-button(ng-click='removeFilter()')
-        md-icon close
-  md-toolbar.md-table-toolbar.alternate(ng-show='selected.length')
-    .md-toolbar-tools(layout-align='space-between')
-      div {{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected
-      md-button.md-icon-button(ng-click='delete($event)')
-        md-icon delete
-  md-table-container
-    table(md-table, md-row-select, multiple, ng-model='selected', md-progress='promise')
-      thead(md-head, md-order='query.order', md-on-reorder='getDesserts')
-        tr(md-row)
-          th(md-column, md-order-by='nameToLower')
-            span Dessert (100g serving)
-          th(md-column, md-numeric, md-order-by='calories.value')
-            span Calories
-          th(md-column, md-numeric) Fat (g)
-          th(md-column, md-numeric) Carbs (g)
-          th(md-column, md-numeric) Protein (g)
-          th(md-column, md-numeric) Sodium (mg)
-          th(md-column, md-numeric) Calcium (%)
-          th(md-column, md-numeric) Iron (%)
-      tbody(md-body)
-        tr(md-row, md-select='dessert', md-select-id='name', md-auto-select, ng-repeat='dessert in desserts')
-          td(md-cell) {{dessert.name}}
-          td(md-cell) {{dessert.calories.value}}
-          td(md-cell) {{dessert.fat.value | number: 1}}
-          td(md-cell) {{dessert.carbs.value}}
-          td(md-cell) {{dessert.protein.value | number: 1}}
-          td(md-cell) {{dessert.sodium.value}}
-          td(md-cell) {{dessert.calcium.value}}{{dessert.calcium.unit}}
-          td(md-cell) {{dessert.iron.value}}{{dessert.iron.unit}}
-  md-table-pagination(md-limit='query._limit', md-limit-options='[5, 10, 15]', md-page='query._page', md-total, md-on-paginate='getDesserts', md-page-select)
-

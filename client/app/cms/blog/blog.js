@@ -14,8 +14,12 @@ export default angular.module('app.cms.blog', [
     $stateProvider
       .state('cms.blog', {
         url: '/blog',
-        component: 'blog',
         abstract: true,
+        views: {
+          'cms@cms': {
+            component: 'blog',
+          }
+        }
       })
   })
   .component('blog', blogComponent)

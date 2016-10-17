@@ -1,5 +1,5 @@
-import newRecordController from './newRecord/newRecord.controller';
-import newRecordTemplate from './newRecord/newRecord.pug';
+// import newRecordController from './newRecord/newRecord.controller';
+// import newRecordTemplate from './newRecord/newRecord.pug';
 
 // // import postsNewRecordController from "./newRecord/newRecord.controller";
 // // import postsNewRecordTemplate from "./newRecord/newRecord.pug";
@@ -84,142 +84,142 @@ import newRecordTemplate from './newRecord/newRecord.pug';
 
 // }
 
-export function sssss($mdDialog, $nutrition, $scope) {
-  'ngInject'
+// export function sssss($mdDialog, $nutrition, $scope) {
+//   'ngInject'
 
-  var bookmark;
+//   var bookmark;
 
-  $scope.selected = [];
+//   $scope.selected = [];
 
-  $scope.filter = {
-    options: {
-      debounce: 500
-    }
-  };
+//   $scope.filter = {
+//     options: {
+//       debounce: 500
+//     }
+//   };
 
-  $scope.query = {
-    q: '',
-    _limit: '5',
-    order: 'nameToLower',
-    _page: 1
-  };
+//   $scope.query = {
+//     q: '',
+//     _limit: '5',
+//     order: 'nameToLower',
+//     _page: 1
+//   };
 
-  function success(desserts) {
-    $scope.desserts = desserts;
-  }
+//   function success(desserts) {
+//     $scope.desserts = desserts;
+//   }
 
-  $scope.addItem = function (event) {
-    $mdDialog.show({
-      clickOutsideToClose: true,
-      controller: newRecordController,
-      controllerAs: 'ctrl',
-      focusOnOpen: false,
-      targetEvent: event,
-      template: newRecordTemplate,
-    }).then($scope.getDesserts);
-  };
+//   $scope.addItem = function (event) {
+//     $mdDialog.show({
+//       clickOutsideToClose: true,
+//       controller: newRecordController,
+//       controllerAs: 'ctrl',
+//       focusOnOpen: false,
+//       targetEvent: event,
+//       template: newRecordTemplate,
+//     }).then($scope.getDesserts);
+//   };
 
-  $scope.delete = function (event) {
-    $mdDialog.show({
-      clickOutsideToClose: true,
-      controller: newRecordController,
-      controllerAs: 'ctrl',
-      focusOnOpen: false,
-      targetEvent: event,
-      locals: { desserts: $scope.selected },
-      template: newRecordTemplate,
-    }).then($scope.getDesserts);
-  };
+//   $scope.delete = function (event) {
+//     $mdDialog.show({
+//       clickOutsideToClose: true,
+//       controller: newRecordController,
+//       controllerAs: 'ctrl',
+//       focusOnOpen: false,
+//       targetEvent: event,
+//       locals: { desserts: $scope.selected },
+//       template: newRecordTemplate,
+//     }).then($scope.getDesserts);
+//   };
 
-  $scope.getDesserts = function () {
-    $scope.promise = $nutrition.desserts.query($scope.query, success).$promise.then(function () {
-      console.log('done');
-    }, function () {
-      console.log('fail');
-    });
-    console.log('$scope.promise', $scope.promise);
-  };
+//   $scope.getDesserts = function () {
+//     $scope.promise = $nutrition.desserts.query($scope.query, success).$promise.then(function () {
+//       console.log('done');
+//     }, function () {
+//       console.log('fail');
+//     });
+//     console.log('$scope.promise', $scope.promise);
+//   };
 
-  $scope.removeFilter = function () {
-    $scope.filter.show = false;
-    $scope.query.q = '';
+//   $scope.removeFilter = function () {
+//     $scope.filter.show = false;
+//     $scope.query.q = '';
 
-    if ($scope.filter.form.$dirty) {
-      $scope.filter.form.$setPristine();
-    }
-  };
+//     if ($scope.filter.form.$dirty) {
+//       $scope.filter.form.$setPristine();
+//     }
+//   };
 
-  $scope.$watch('query.q', function (newValue, oldValue) {
-    if (!oldValue) {
-      bookmark = $scope.query._page;
-    }
+//   $scope.$watch('query.q', function (newValue, oldValue) {
+//     if (!oldValue) {
+//       bookmark = $scope.query._page;
+//     }
 
-    if (newValue !== oldValue) {
-      $scope.query._page = 1;
-    }
+//     if (newValue !== oldValue) {
+//       $scope.query._page = 1;
+//     }
 
-    if (!newValue) {
-      $scope.query._page = bookmark;
-    }
+//     if (!newValue) {
+//       $scope.query._page = bookmark;
+//     }
 
-    $scope.getDesserts();
-  });
-}
+//     $scope.getDesserts();
+//   });
+// }
 
-class PostssssController {
-  constructor($mdDialog, $posts, $scope) {
-    'ngInject'
-    this.$mdDialog = $mdDialog;
-    this.$posts = $posts;
-    this.$scope = $scope;
+// class PostssssController {
+//   constructor($mdDialog, $posts, $scope) {
+//     'ngInject'
+//     this.$mdDialog = $mdDialog;
+//     this.$posts = $posts;
+//     this.$scope = $scope;
 
-    this.selectedRecords = [];
+//     this.selectedRecords = [];
 
-    this.filter = {
-      options: {
-        debounce: 500
-      }
-    }
-    this.query = {
-      _limit: 10,
-      _page: 1
-    }
-    this.tableMode = this._setTableMode()
+//     this.filter = {
+//       options: {
+//         debounce: 500
+//       }
+//     }
+//     this.query = {
+//       _limit: 10,
+//       _page: 1
+//     }
+//     this.tableMode = this._setTableMode()
 
-    $scope.$watch(() => this.query.filter, function (newValue, oldValue, scope) {
+//     $scope.$watch(() => this.query.filter, function (newValue, oldValue, scope) {
 
-    });
+//     });
 
-  }
+//   }
 
-  isDefaultMode() {
-    return !(this.isSelectMode() || this.isSearchMode()) ? true : false
-  }
+//   isDefaultMode() {
+//     return !(this.isSelectMode() || this.isSearchMode()) ? true : false
+//   }
 
-  isSelectMode() {
-    return this.selectedRecordsCount() ? true : true;
-  }
+//   isSelectMode() {
+//     return this.selectedRecordsCount() ? true : true;
+//   }
 
-  selectedRecordsCount() {
-    return this.selectedRecords ? this.selectedRecords.length : null;
-  }
-  _setTableMode() {
-    return this.isSelectMode() ? 'select-mode' : this.isSearchMode() ? 'filter-mode' : 'md-default default-mode';
-  }
+//   selectedRecordsCount() {
+//     return this.selectedRecords ? this.selectedRecords.length : null;
+//   }
+//   _setTableMode() {
+//     return this.isSelectMode() ? 'select-mode' : this.isSearchMode() ? 'filter-mode' : 'md-default default-mode';
+//   }
 
-  isSearchMode() {
+//   isSearchMode() {
 
-  }
+//   }
 
-  updatePosts(posts) {
-    this.posts = posts;
-  }
+//   updatePosts(posts) {
+//     this.posts = posts;
+//   }
 
-  getPosts() {
-    this.promise = this.$posts.query($scope.query, success).$promise;
-  }
+//   getPosts() {
+//     this.promise = this.$posts.query($scope.query, success).$promise;
+//   }
 
-}
+// }
 
 // export default class {
 //   tableModes = {
@@ -444,12 +444,12 @@ export default class postsController {
       'background-color': 'inherit'
     }
     if (this.currentTableMode.name === this.tableModes.select.name) {
-      theme['background-color'] = this.$mdColors.getThemeColor('accent-A200-0.25')
+      theme['background-color'] = this.$mdColors.getThemeColor('accent-A200-0.15')
       theme.color = this.$mdColors.getThemeColor('accent-A200')
     }
     return theme;
   }
-
+  _setTableModeClass() {}
   activeTableMode(mode) {
     this._setTableMode(this.tableModes[mode] || this.currentTableMode);
   }
