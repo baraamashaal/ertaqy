@@ -8,6 +8,7 @@ import postsComponent from './posts.component';
 import postsFactory from './posts.factory';
 
 import newPostModule from './newPost/newPost';
+console.log('newPostModule', newPostModule);
 
 export default angular.module('app.cms.blog.posts', [
     uiRouter,

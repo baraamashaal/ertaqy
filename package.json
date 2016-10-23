@@ -9,11 +9,19 @@
     "angular-aria": "^1.5.8",
     "angular-material": "^1.1.1",
     "angular-material-data-table": "^0.10.9",
+    "angular-messages": "^1.5.8",
     "angular-resource": "^1.2.31",
+    "angular-sanitize": "^1.5.8",
+    "angular-schema-form": "^0.8.13",
+    "angular-schema-form-material": "^1.0.0-alpha.1",
     "angular-ui-router": "^1.0.0-beta.1",
     "angular-ui-tinymce": "0.0.17",
     "md-data-table": "^1.8.0",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "objectpath": "^1.2.1",
+    "oclazyload": "^1.0.9",
+    "tinymce": "^4.4.3",
+    "tv4": "^1.2.7"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
