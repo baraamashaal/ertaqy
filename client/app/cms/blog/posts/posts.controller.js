@@ -466,5 +466,17 @@ export default class postsController {
     this.posts = posts;
   }
 
+  delete(event) {
+    $mdDialog.show({
+      clickOutsideToClose: true,
+      controller: 'deleteController',
+      controllerAs: 'ctrl',
+      focusOnOpen: false,
+      targetEvent: event,
+      locals: { desserts: $scope.selected },
+      templateUrl: 'templates/delete-dialog.html',
+    }).then($scope.getDesserts);
+  };
+
 }
 

@@ -17,7 +17,7 @@ md-card
     .md-toolbar-tools(ng-show='$ctrl.tableModes.select.isActive')
       div {{$ctrl.selectedRecords.length}} {{$ctrl.selectedRecords.length > 1 ? 'items' : 'item'}} selected
       div(flex)
-      md-button.md-icon-button(ng-click='delete($event)')
+      md-button.md-icon-button(ng-click='$ctrl.delete($event)')
         md-icon delete
   md-table-container
     table(md-table, md-row-select='true', multiple='true', ng-model='$ctrl.selectedRecords', md-progress='$ctrl.recordsPromise')
@@ -43,3 +43,4 @@ md-card
           td(md-cell)
             span.status-circle-icon(ng-class='post.status ? "online" : "offline"')
   md-table-pagination(md-limit='$ctrl.recordsQuery._limit', md-limit-options='[10, 15, 25]', md-page='$ctrl.recordsQuery._page', md-total='1000', md-on-paginate='$ctrl.getPosts', md-page-select)
+  h1 {{$ctrl.selectedRecords || json}}
