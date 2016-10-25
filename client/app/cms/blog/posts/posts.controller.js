@@ -331,6 +331,8 @@
 //     return !(this.isSearchMode() && this.isSelectMode())
 //   }
 // }
+import deletePostCtrl from './removePost/removePost.controller';
+import deletePostTmpl from './removePost/removePost.pug';
 
 export default class postsController {
   bookmark = null;
@@ -467,15 +469,15 @@ export default class postsController {
   }
 
   delete(event) {
-    $mdDialog.show({
+    this.$mdDialog.show({
       clickOutsideToClose: true,
-      controller: 'deleteController',
+      controller: deletePostCtrl,
       controllerAs: 'ctrl',
       focusOnOpen: false,
       targetEvent: event,
-      locals: { desserts: $scope.selected },
-      templateUrl: 'templates/delete-dialog.html',
-    }).then($scope.getDesserts);
+      locals: { posts: this.selectedRecords },
+      template: deletePostTmpl,
+    }).then(this.getPosts);
   };
 
 }

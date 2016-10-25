@@ -7,19 +7,22 @@ export default class deletePost {
     this.$scope = $scope;
     this.$q = $q;
 
+    console.log('this.$posts', this.$posts);
 
 
-    $q.all(posts.forEach(this.deletePost)).then(this.removeDialog);
+    // $q.all(posts.forEach(this.deletePost)).then(this.$mdDialog.hide());
   }
-  cancel = $mdDialog.cancel;
-  deletePost(dessert, index) {
-    var deferred = $posts.remove({ id: dessert._id });
-
+  deletePost(post, index) {
+    var deferred = this.$posts.remove({ id: post.id });
+    var that = this;
     deferred.$promise.then(function () {
-      desserts.splice(index, 1);
+      that.posts.splice(index, 1);
     });
 
     return deferred.$promise;
   }
-}
+  confirm() {
+    this.$q.all(this.posts.forEach(this.deletePost).then(this.$mdDialog.hide());
+    }
+  }
 

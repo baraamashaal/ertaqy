@@ -6,7 +6,7 @@ md-card
       div(flex)
       md-button.md-icon-button(md-ink-ripple="false", ng-click='$ctrl.activeTableMode("search")')
         md-icon &#xE8B6;
-      md-button.md-icon-button(ng-click='addItem($event)')
+      md-button.md-icon-button(ng-click='addItem($event)' ui-sref='cms.blog.posts.add')
         md-icon &#xE145;
     .md-toolbar-tools(ng-show='$ctrl.tableModes.search.isActive')
       md-icon search

@@ -1,0 +1,8 @@
+md-dialog(delete-dialog)
+  md-dialog-content.md-dialog-content
+    h2.md-title Delete Items
+    p
+      | r u sure u want to confirm
+  .md-actions
+    md-button.md-primary(ng-click='ctrl.confirm()') Delete
+    md-button.md-primary(ng-click='ctrl.cancel()') Close
